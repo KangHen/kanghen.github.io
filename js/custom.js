@@ -58,7 +58,7 @@ $(document).ready(function(){
             $(".list").find("a").removeClass("_selected");
              var linkRel=$(this).attr("href");
              $(this).addClass("_selected");
-             $.getJSON("http://hanyapercobaan.byethost4.com/tubanbanget/array.php"+linkRel,function(data){
+             $.getJSON("http://antypovertytuban.hol.es//array.php?"+linkRel+"&jsoncallback=?",function(data){
                var dataCount=data.length;
                if(dataCount > 0){
                var showData="";
@@ -81,7 +81,7 @@ $(document).ready(function(){
             $(".list").find("a").removeClass("_selected");
              var linkRel=$(this).attr("href");
              $(this).addClass("_selected");
-             $.getJSON("http://hanyapercobaan.byethost4.com/tubanbanget/array.php"+linkRel,function(data){
+             $.getJSON("http://antypovertytuban.hol.es//array.php?"+linkRel+"&jsoncallback=?",function(data){
                var dataCount=data.length;
                if(dataCount > 0){
                var showData="";
@@ -99,10 +99,13 @@ $(document).ready(function(){
         });
         //
         $(".dataForm").submit(function(){
+          var contentType ="application/x-www-form-urlencoded; charset=utf-8";
           var saveRel=$(this).attr("action");
           $.ajax({
       			url:saveRel,
       			type:"POST",
+      			dataType:"json",
+      			contentType:contentType,
       			data:$(this).serialize(),
       			success:function(ret){
       				if(ret){
