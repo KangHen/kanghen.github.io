@@ -17,7 +17,7 @@
     HUBUNGI KAMI</h1>
     <h5>Berikan Komentar Anda</h5>
   <div class='submit'>
-    <form class="dataForm" action="http://hanyapercobaan.byethost4.com/tubanbanget/save.php" method="post">
+    <form class="dataForm" action="http://antypovertytuban.hol.es/allaction.php?a=save" method="post">
     <input type='text' name='nama' placeholder="nama anda" required="required"/>
     <input type='text' name='email' placeholder="email anda" required="required"/>
     <textarea name='komentar'></textarea>
@@ -31,7 +31,7 @@
 <script type="text/javascript">
   $(document).ready(function(){
     function postData(){
-      $.get("http://hanyapercobaan.byethost4.com/tubanbanget/comment.php",function(data){
+      $.get("http://antypovertytuban.hol.es/allaction.php?a=comment&jsoncallback=?",function(data){
         var dataCount=data.length;
         if(dataCount > 0){
           var showData="";
