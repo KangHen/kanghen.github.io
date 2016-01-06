@@ -31,7 +31,7 @@
 <script type="text/javascript">
   $(document).ready(function(){
     function postData(){
-      $.get("http://antypovertytuban.hol.es/allaction.php?a=comment&jsoncallback=?",function(data){
+      $.getJSON("http://antypovertytuban.hol.es/comment.php?jsoncallback=?",function(data){
         var dataCount=data.length;
         if(dataCount > 0){
           var showData="";
