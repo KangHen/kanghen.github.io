@@ -58,7 +58,7 @@ $(document).ready(function(){
             $(".list").find("a").removeClass("_selected");
              var linkRel=$(this).attr("href");
              $(this).addClass("_selected");
-             $.getJSON("http://antypovertytuban.hol.es//array.php?"+linkRel+"&jsoncallback=?",function(data){
+             $.getJSON("http://hendriarga.ciki.me/custom_config/array.php?"+linkRel+"&jsoncallback=?",function(data){
                var dataCount=data.length;
                if(dataCount > 0){
                var showData="";
@@ -81,7 +81,7 @@ $(document).ready(function(){
             $(".list").find("a").removeClass("_selected");
              var linkRel=$(this).attr("href");
              $(this).addClass("_selected");
-             $.getJSON("http://antypovertytuban.hol.es//array.php?"+linkRel+"&jsoncallback=?",function(data){
+             $.getJSON("http://hendriarga.ciki.me/custom_config/array.php?"+linkRel+"&jsoncallback=?",function(data){
                var dataCount=data.length;
                if(dataCount > 0){
                var showData="";
