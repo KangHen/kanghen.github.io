@@ -104,14 +104,14 @@ $(document).ready(function(){
           $.ajax({
       			url:saveRel,
       			type:"POST",
-      			dataType:"json",
       			contentType:contentType,
       			data:$(this).serialize(),
       			success:function(ret){
+      			  console.log(ret);
       				if(ret){
-                swal("Gagal Simpan Data","","error");
+      				  swal("Terima Kasih Komentarnya","","success");
               }else{
-                swal("Terima Kasih Komentarnya","","success");
+                swal("Gagal Simpan Data","","error");
               }
       			}
       		});
