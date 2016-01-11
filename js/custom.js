@@ -1,11 +1,16 @@
 $(document).ready(function(){
+  var baseUrl="http://kanghen.github.io/";
   var uri=window.location.href;
-  var urisection=uri.split("?");
+  if(uri===baseUrl){
+    urisection=["http://kanghen.github.io"];
+  }else{
+    var urisection=uri.split("?");
+  }
   console.log(urisection);
   $("#"+urisection[1]).addClass("selected");
   $("#"+urisection[1]).find("a").css("color","#000");
   //
-  if(typeof urisection == "undefined" || sessionvalue == null){
+  if(urisection.length < 2){
     $("#pageSide").load("beranda.html",function(){
       $(".scroll").click(function(event){
         var $target=$(this).attr("href");
