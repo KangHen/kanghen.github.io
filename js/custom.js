@@ -133,7 +133,15 @@ $(document).ready(function(){
   }
   //
   $(window).scroll(function(e){
-    var sp=urisection[1];
+    var baseUrl="http://kanghen.github.io/";
+    var wuri=window.location.href;
+    var wurisection=[];
+  if(wuri===baseUrl){
+    wurisection=[baseUrl];
+  }else{
+    wurisection=uri.split("?");
+  }
+    var sp=wurisection[1];
     var spA=sp.split("#");
     var positionTarget=$("#section-1").offset().top;
     var M=window.pageYOffset+150;
