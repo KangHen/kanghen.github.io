@@ -5,7 +5,7 @@ $(document).ready(function(){
   $("#"+urisection[1]).addClass("selected");
   $("#"+urisection[1]).find("a").css("color","#000");
   //
-  if(urisection.length < 2){
+  if(typeof urisection == "undefined" || sessionvalue == null){
     $("#pageSide").load("beranda.html",function(){
       $(".scroll").click(function(event){
         var $target=$(this).attr("href");
