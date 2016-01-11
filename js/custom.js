@@ -1,12 +1,13 @@
 $(document).ready(function(){
   var baseUrl="http://kanghen.github.io/";
   var uri=window.location.href;
+  var urisection=[];
   if(uri===baseUrl){
-    urisection=["http://kanghen.github.io"];
+    urisection=[baseUrl];
   }else{
-    var urisection=uri.split("?");
+    urisection=uri.split("?");
   }
-  console.log(urisection);
+  console.log(uri);
   $("#"+urisection[1]).addClass("selected");
   $("#"+urisection[1]).find("a").css("color","#000");
   //
