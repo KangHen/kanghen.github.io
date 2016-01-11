@@ -133,19 +133,19 @@ $(document).ready(function(){
   }
   //
   $(window).scroll(function(e){
-    var baseUrl="http://kanghen.github.io/";
-    var wuri=window.location.href;
-    var wurisection=[];
-  if(wuri===baseUrl){
-    wurisection=[baseUrl];
-  }else{
-    wurisection=uri.split("?");
-  }
-    var sp=wurisection[1];
-    var spA=sp.split("#");
+    var U=window.location.href;
+    var Yo=U.split("?");
+    var Mn=[];
+    if(typeof Yo[1] == "undefinied"){
+      Mn=["http","non"];
+    }else{
+      Mn=Yo[1];
+    }
+    var sp=Mn.split("#");
+    //var spA=sp.split("#");
     var positionTarget=$("#section-1").offset().top;
     var M=window.pageYOffset+150;
-    if(spA[0]==="detail"){
+    if(sp[0]==="detail"){
       if(M > positionTarget-60){
         $(".menu").css("top",-30);
         $(".to-top").fadeIn();
