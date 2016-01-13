@@ -3,7 +3,7 @@ $(document).ready(function(){
   var uri=window.location.href;
   var urisection=[];
   if(uri===baseUrl){
-    window.location.href="http://kanghen.github.io/?beranda";
+    urisection=[baseUrl];
   }else{
     urisection=uri.split("?");
   }
